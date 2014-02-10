@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>gcb_description</name>
+  <version>0.0.0</version>
+  <description>The gcb_description package</description>
+
+  <maintainer email="lothas@gmail.com">Jonathan Spitz</maintainer>
+
+  <license>BSD</license>
+
+  <author email="lothas@gmail.com">Jonathan Spitz</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+  </export>
+</package>

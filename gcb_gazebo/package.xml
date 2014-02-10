@@ -1,0 +1,19 @@
+<package>
+  <name>gcb_gazebo</name>
+  <version>0.1.0</version>
+  <description>gcb_gazebo</description>
+  <maintainer email="lothas@gmail.com">Jonathan Spitz</maintainer>
+
+  <license>BSD</license>
+
+  <author email="lothas@gmail.com">Jonathan Spitz</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>gcb_description</run_depend>
+  <run_depend>gcb_control</run_depend> 
+  <run_depend>gazebo_ros</run_depend> 
+
+  <export>
+  </export>
+</package>

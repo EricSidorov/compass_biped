@@ -1,0 +1,27 @@
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find gcb_control)/config/gcb_control.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <!-- <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+	output="screen" ns="/gcb" args="joint_state_controller
+					  hip_effort_controller
+					  hip_position_controller
+					  lankle_effort_controller
+					  lankle_position_controller
+					  rankle_effort_controller
+					  rankle_position_controller"/> -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+	output="screen" ns="/gcb" args="joint_state_controller
+					  hip_effort_controller
+					  lankle_effort_controller
+					  rankle_effort_controller"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+	respawn="false" output="screen">
+    <remap from="/joint_states" to="/gcb/joint_states" />
+  </node>
+
+</launch>

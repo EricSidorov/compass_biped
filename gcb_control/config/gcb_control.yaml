@@ -1,0 +1,25 @@
+gcb:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 1000  
+  # Effort Controllers ---------------------------------------
+  hip_effort_controller:
+    type: effort_controllers/JointEffortController
+    joint: hip
+
+  lankle_effort_controller:
+    type: effort_controllers/JointEffortController
+    joint: left_ankle
+
+  rankle_effort_controller:
+    type: effort_controllers/JointEffortController
+    joint: right_ankle
+
+EffPosCon:
+  hip:
+      params: {P: 60.0, I: 0.0, D: 4.0, k_eff: 0.0}
+  left_ankle:
+      params: {P: 60.0, I: 0.0, D: 4.0, k_eff: 0.0}
+  right_ankle:
+      params: {P: 60.0, I: 0.0, D: 4.0, k_eff: 0.0}

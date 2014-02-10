@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <name>gcb_control</name>
+  <version>0.0.0</version>
+  <description>The gcb_control package</description>
+
+  <maintainer email="lothas@gmail.com">Jonathan Spitz</maintainer>
+
+  <license>BSD</license>
+
+  <author email="lothas@gmail.com">Jonathan Spitz</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>controller_manager</run_depend>
+
+  <export>
+  </export>
+
+</package>
