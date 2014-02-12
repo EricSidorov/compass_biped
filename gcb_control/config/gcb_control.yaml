@@ -18,8 +18,8 @@ gcb:
 
 EffPosCon:
   hip:
-      params: {P: 60.0, I: 0.0, D: 4.0, k_eff: 0.0}
+      params: {P: 200.0, I: 0.0, D: 1.0}
   left_ankle:
-      params: {P: 60.0, I: 0.0, D: 4.0, k_eff: 0.0}
+      params: {P: 60.0, I: 0.0, D: 4.0}
   right_ankle:
-      params: {P: 60.0, I: 0.0, D: 4.0, k_eff: 0.0}
+      params: {P: 60.0, I: 0.0, D: 4.0}

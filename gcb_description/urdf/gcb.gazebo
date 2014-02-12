@@ -19,8 +19,8 @@
 
   <gazebo reference="left_foot">
     <material>Gazebo/Blue</material>
-    <mu1>0.6</mu1>
-    <mu2>0.6</mu2>
+    <mu1>1.6</mu1>
+    <mu2>1.6</mu2>
   </gazebo>
   
   
@@ -35,8 +35,8 @@
 
   <gazebo reference="right_foot">
     <material>Gazebo/Red</material>
-    <mu1>0.6</mu1>
-    <mu2>0.6</mu2>
+    <mu1>1.6</mu1>
+    <mu2>1.6</mu2>
   </gazebo>
   
   
