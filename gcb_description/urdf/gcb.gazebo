@@ -48,7 +48,7 @@
     </sensor>
   </gazebo>
 
-  <gazebo reference="right_foot">
+<!--   <gazebo reference="right_foot">
     <sensor name="rfoot_contact_sensor" type="contact">
       <update_rate>1000.0</update_rate>
       <always_on>1</always_on>
@@ -68,7 +68,7 @@
         <topic>/l_foot_contact</topic>
       </contact>
     </sensor>
-  </gazebo>
+  </gazebo> -->
 
   <gazebo>
     <!-- robot model offset -->
@@ -85,6 +85,40 @@
       <updateRate>100.0</updateRate>
     </plugin>
   </gazebo>
+  <gazebo reference='left_foot'>
+    <sensor name="left_foot_bumper" type="contact">
+        <always_on>true</always_on>
+        <update_rate>50</update_rate>
+        <visualize>true</visualize>
+        <pose>0 0 0   0 0 0</pose>
+        <topic>left_foot_contact</topic>
+        <contact>
+            <collision>left_foot_collision</collision>
+            <topic>left_foot_contact</topic>
+        </contact>
+        <plugin name="bumper" filename="libgazebo_ros_bumper.so">
+            <bumperTopicName>left_foot_contact</bumperTopicName> 
+            <frameName>world</frameName>
+        </plugin> 
+    </sensor>
+</gazebo>
+<gazebo reference='right_foot'>
+    <sensor name="right_foot_bumper" type="contact">
+        <always_on>true</always_on>
+        <update_rate>50</update_rate>
+        <visualize>true</visualize>
+        <pose>0 0 0   0 0 0</pose>
+        <topic>right_foot_contact</topic>
+        <contact>
+            <collision>right_foot_collision</collision>
+            <topic>right_foot_contact</topic>
+        </contact>
+        <plugin name="bumper" filename="libgazebo_ros_bumper.so">
+            <bumperTopicName>right_foot_contact</bumperTopicName> 
+            <frameName>world</frameName>
+        </plugin> 
+    </sensor>
+</gazebo>
   <!-- collision plugin -->
   <!-- <gazebo reference="left_foot">
     <plugin name="gazebo_ros_bumper" filename="libgazebo_ros_bumper.so">
